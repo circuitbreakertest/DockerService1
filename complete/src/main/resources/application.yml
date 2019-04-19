@@ -1,10 +1,10 @@
 server:
-  port: 8070
+  port: 8080
 
 #TODO: figure out why I need this here and in bootstrap.yml
 spring:
   application:
-    name: DockerService
+    name: testLatticeApp
 
 ribbon:
   ServerListRefreshInterval: 1000
