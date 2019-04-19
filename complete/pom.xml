@@ -8,6 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Spring Boot DockerService1</name>
+	<description>Getting started with Spring Boot and Docker</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -23,6 +24,7 @@
 	</dependencies>
 
 	<properties>
+		<docker.image.prefix>test</docker.image.prefix>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -37,7 +39,7 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.9</version>
 				<configuration>
-					<repository>DockerService1</repository>
+					<repository>${docker.image.prefix}/${project.artifactId</repository>
 				</configuration>
 			</plugin>
 
@@ -54,9 +56,9 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>com.digiwin</groupId>
-									<artifactId>DockerService1</artifactId>
-									<version>0.0.1-SNAPSHOT</version>
+									<groupId>${project.groupId}</groupId>
+									<artifactId>${project.artifactId}</artifactId>
+									<version>${project.version}</version>
 								</artifactItem>
 							</artifactItems>
 						</configuration>
