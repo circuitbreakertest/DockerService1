@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Application {
 
-    @RequestMapping("/")
+    @RequestMapping("/test")
     public String home() {
-        return "Hello Docker World";
+        return "DockerService1";
     }
 
     public static void main(String[] args) {
